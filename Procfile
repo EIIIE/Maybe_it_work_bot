@@ -1,1 +1,1 @@
-worker: sh target/src/MyBot
+worker: java -java target/src/MyBot
