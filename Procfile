@@ -1,1 +1,1 @@
-java -jar target/out/artifacts/SugarCloud/SugarCloud.jar
+worker: sh target/src/MyBot
