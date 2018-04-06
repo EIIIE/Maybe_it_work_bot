@@ -1,1 +1,1 @@
-web: java -java target/src/MyBot
+web: java -jar target/src/Maybe_it_work_bot.jar
