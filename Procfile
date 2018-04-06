@@ -1,1 +1,1 @@
-worker: java -jar target/out/artifacts/SugarCloud/SugarCloud.jar
+worker: sh target/bin/worker
