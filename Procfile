@@ -1,1 +1,1 @@
-java -jar target/src/MyBot.java
+java -jar target/out/artifacts/SugarCloud/SugarCloud.jar

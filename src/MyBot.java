@@ -10,8 +10,8 @@ import java.io.*;
 
 public class MyBot extends TelegramLongPollingBot {
 
-    public static String botToken = "";
-    public static String botUsername= "";
+    private static String botToken = "";
+    private static String botUsername= "";
 
     public static void main(String[] args) throws IOException {
 
@@ -34,12 +34,12 @@ public class MyBot extends TelegramLongPollingBot {
         }
     }
 
-    @Override
+
     public String getBotUsername() {
         return botUsername;
     }
 
-    @Override
+
     public void onUpdateReceived(Update update) {
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
