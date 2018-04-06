@@ -1,1 +1,1 @@
-worker: java -java target/src/MyBot
+web: java -java target/src/MyBot
