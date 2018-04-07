@@ -1,1 +1,1 @@
-web: java -jar target/src/Maybe_it_work_bot.jar
+web: java $JAVA_OPTS -jar target/tgBotApp.jar

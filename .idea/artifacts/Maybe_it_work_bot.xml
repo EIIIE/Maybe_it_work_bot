@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="Maybe_it_work_bot">
-    <output-path>$PROJECT_DIR$/out/artifacts/Maybe_it_work_bot</output-path>
-    <root id="archive" name="Maybe_it_work_bot.jar">
-      <element id="module-output" name="Maybe_it_work_bot" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../telegrambots-3.6-jar-with-dependencies.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>
