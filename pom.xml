@@ -38,7 +38,7 @@
                             <archive>
                                 <manifest>
                                     <addClasspath>true</addClasspath>
-                                    <mainClass>ru.lizovski.MyBot</mainClass>
+                                    <mainClass>ru.lizovski.SugarCloudBot</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
