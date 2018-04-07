@@ -16,16 +16,7 @@ public class SugarCloudBot extends TelegramLongPollingBot {
     private static String botUsername= System.getenv("botUsername");
 
     public static void main(String[] args) /*throws IOException*/ {
-        /*
-        InputStream inputStream = System.in;
-        Reader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-        System.out.println("BotUsername: ");
-        botUsername = bufferedReader.readLine();
-        System.out.println("BotToken: ");
-        botToken = bufferedReader.readLine();
-        */
         ApiContextInitializer.init();
         TelegramBotsApi botsApi = new TelegramBotsApi();
 
@@ -48,6 +39,9 @@ public class SugarCloudBot extends TelegramLongPollingBot {
                     .setChatId(update.getMessage().getChatId());
             if (update.getMessage().getText().equals("/start")) {
                 message.setText("Hello, world! This is simple bot!");
+            }
+            if (update.getMessage().getText().equals("/me")) {
+                message.setText("Just a nice try in bots world...");
             }
             try {
                 System.out.println(message);
