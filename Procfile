@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/tgBotApp.jar
+worker: java $JAVA_OPTS -jar target/SugarCloud.jar

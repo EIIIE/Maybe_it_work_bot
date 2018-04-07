@@ -7,8 +7,12 @@
 
     <groupId>Labs</groupId>
     <artifactId>MAIS</artifactId>
-    <packaging>pom</packaging>
     <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 
     <dependencies>
