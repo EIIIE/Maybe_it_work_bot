@@ -36,7 +36,6 @@ public class SugarCloudBot extends TelegramLongPollingBot {
         }
     }
 
-
     public String getBotUsername() {
         return botUsername;
     }
@@ -45,9 +44,11 @@ public class SugarCloudBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         // We check if the update has a message and the message has text
         if (update.hasMessage() && update.getMessage().hasText()) {
-            SendMessage message = new SendMessage() // Create a SendMessage object with mandatory fields
-                    .setChatId(update.getMessage().getChatId())
-                    .setText(update.getMessage().getText());
+            SendMessage message = new SendMessage()
+                    .setChatId(update.getMessage().getChatId());
+            if (update.getMessage().getText().equals("/start")) {
+                message.setText("Hello, world! This is simple bot!");
+            }
             try {
                 System.out.println(message);
                 execute(message); // Call method to send the message
