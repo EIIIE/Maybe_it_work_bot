@@ -12,11 +12,11 @@ import java.io.*;
 
 public class SugarCloudBot extends TelegramLongPollingBot {
 
-    private static String botToken = "";
-    private static String botUsername= "";
+    private static String botToken = System.getenv("botToken");
+    private static String botUsername= System.getenv("botUsername");
 
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) /*throws IOException*/ {
+        /*
         InputStream inputStream = System.in;
         Reader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -25,7 +25,7 @@ public class SugarCloudBot extends TelegramLongPollingBot {
         botUsername = bufferedReader.readLine();
         System.out.println("BotToken: ");
         botToken = bufferedReader.readLine();
-
+        */
         ApiContextInitializer.init();
         TelegramBotsApi botsApi = new TelegramBotsApi();
 
