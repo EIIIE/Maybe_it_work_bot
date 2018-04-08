@@ -86,7 +86,7 @@
                             <archive>
                                 <manifest>
                                     <addClasspath>true</addClasspath>
-                                    <mainClass>ru.lizovski.SugarCloudBot</mainClass>
+                                    <mainClass>ru.lizovski.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
