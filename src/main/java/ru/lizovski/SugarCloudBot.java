@@ -29,20 +29,38 @@ public class SugarCloudBot extends TelegramLongPollingBot {
             long user_id = update.getMessage().getChat().getId();
             String message_text = update.getMessage().getText();
             long chat_id = update.getMessage().getChatId();
-            String answer = message_text;
+            String answer ;
 
             // Commands from chat
-            if (update.getMessage().getText().equals("/start")) {
-                answer = "Hello, world! This is simple bot! :suspect:";
-            }
-            if (update.getMessage().getText().equals("/me")) {
-                answer = EmojiParser.parseToUnicode(
-                        ":hear_no_evil: First name: " + user_first_name + "\n"
-                        + ":see_no_evil: Last name: " + user_last_name + "\n"
-                        + ":speak_no_evil: Username: " + user_username + "\n"
-                        + ":cyclone: User id: " + update.getMessage().getChat().getId() + "\n"
-                        + ":snowflake: Chat id: " + update.getMessage().getChatId() + "\n"
-                        + ":feelsgood: Description: " + update.getMessage().getChat().getDescription()+ "\n");
+            switch (update.getMessage().getText())
+            {
+                case "/start":
+                    answer = EmojiParser.parseToUnicode("Hello, world! This is simple bot! :suspect:");
+                    break;
+
+                case "/me":
+                    answer = EmojiParser.parseToUnicode(
+                            ":hear_no_evil: First name: " + user_first_name + "\n"
+                                    + ":see_no_evil: Last name: " + user_last_name + "\n"
+                                    + ":speak_no_evil: Username: " + user_username + "\n"
+                                    + ":cyclone: User id: " + update.getMessage().getChat().getId() + "\n"
+                                    + ":snowflake: Chat id: " + update.getMessage().getChatId() + "\n"
+                                    + ":umbrella: Description: " + update.getMessage().getChat().getDescription() + "\n");
+                    break;
+
+                case "/bots":
+                    answer = EmojiParser.parseToUnicode(
+                            ":ghost: Some example bots from TelegramBots Api: \n"
+                                    + ":iphone: Use custom keyboards: @weatherbot\n"
+                                    + ":envelope: Basic messages: @directionsbot\n"
+                                    + ":email: Send files by file_id: @filesbot\n"
+                                    + ":postbox: Send files uploding them: @TGlanguagesbot\n"
+                                    + ":mag_right: Inline support: @RaeBot\n"
+                                    + ":e-mail: Webhook support: @SnowcrashBot\n");
+                    break;
+
+                 default:
+                     answer = "You wrote: " + update.getMessage().getText();
             }
 
             // Create a message object object
