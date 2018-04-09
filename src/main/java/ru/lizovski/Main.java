@@ -12,7 +12,7 @@ public class Main {
         // Instantiate Telegram Bots API
         TelegramBotsApi botsApi = new TelegramBotsApi();
 
-        // Register our bot
+        // Register bot
         try {
             botsApi.registerBot(new SugarCloudBot());
         } catch (TelegramApiException e) {

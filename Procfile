@@ -1,1 +1,1 @@
-worker: java $JAVA_OPTS -jar target/SugarCloud.jar
+worker: java -jar target/SugarCloud.jar
