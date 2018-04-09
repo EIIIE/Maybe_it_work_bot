@@ -50,11 +50,11 @@ public class SugarCloudBot extends TelegramLongPollingBot {
 
                 case "/bots":
                     answer = EmojiParser.parseToUnicode(
-                            ":ghost: Some example bots from TelegramBots Api: \n"
+                                ":ghost: Some examples from TelegramBots Api: \n"
                                     + ":iphone: Use custom keyboards: @weatherbot\n"
-                                    + ":envelope: Basic messages: @directionsbot\n"
+                                    + ":inbox_tray: Basic messages: @directionsbot\n"
                                     + ":email: Send files by file_id: @filesbot\n"
-                                    + ":postbox: Send files uploding them: @TGlanguagesbot\n"
+                                    + ":postbox: Another files: @TGlanguagesbot\n"
                                     + ":mag_right: Inline support: @RaeBot\n"
                                     + ":e-mail: Webhook support: @SnowcrashBot\n");
                     break;
