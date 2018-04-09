@@ -54,7 +54,6 @@ public class SugarCloudBot extends TelegramLongPollingBot {
             log(user_username, user_first_name, user_last_name, Long.toString(user_id), message_text, answer);
 
             try {
-                System.out.println(message);
                 execute(message); // Call method to send the message
             } catch (TelegramApiException e) {
                 e.printStackTrace();
