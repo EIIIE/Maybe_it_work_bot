@@ -1,5 +1,6 @@
 package ru.lizovski;
 
+import com.vdurmont.emoji.EmojiParser;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -35,12 +36,13 @@ public class SugarCloudBot extends TelegramLongPollingBot {
                 answer = "Hello, world! This is simple bot! :suspect:";
             }
             if (update.getMessage().getText().equals("/me")) {
-                answer =  ":hear_no_evil: First name: " + user_first_name + "\n"
+                answer = EmojiParser.parseToUnicode(
+                        ":hear_no_evil: First name: " + user_first_name + "\n"
                         + ":see_no_evil: Last name: " + user_last_name + "\n"
                         + ":speak_no_evil: Username: " + user_username + "\n"
                         + ":cyclone: User id: " + update.getMessage().getChat().getId() + "\n"
                         + ":snowflake: Chat id: " + update.getMessage().getChatId() + "\n"
-                        + ":feelsgood: Description: " + update.getMessage().getChat().getDescription()+ "\n";
+                        + ":feelsgood: Description: " + update.getMessage().getChat().getDescription()+ "\n");
             }
 
             // Create a message object object
