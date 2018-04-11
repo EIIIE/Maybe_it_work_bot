@@ -35,7 +35,7 @@ public class SugarCloudBot extends TelegramLongPollingBot {
             switch (update.getMessage().getText())
             {
                 case "/start":
-                    answer = EmojiParser.parseToUnicode("Hello, world! This is simple bot! :suspect:");
+                    answer = EmojiParser.parseToUnicode("Hello, world! This is simple bot! :ghost:");
                     break;
 
                 case "/me":
